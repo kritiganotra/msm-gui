@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   get("/directors", { :controller => "directors", :action => "index" })
   get("/directors/:path_id", { :controller => "directors", :action => "show" })
+  post("/new_director" , { :controller => "directors", :action => "new"})
+  post("/update_director/:the_id" , { :controller => "directors", :action => "update" })
+  get("/delete_director/:an_id" , {:controller => "directors" , :action => "delete"})
 
   get("/movies", { :controller => "movies", :action => "index" })
   get("/movies/:path_id", { :controller => "movies", :action => "show" })
@@ -15,4 +18,7 @@ Rails.application.routes.draw do
   
   get("/actors", { :controller => "actors", :action => "index" })
   get("/actors/:path_id", { :controller => "actors", :action => "show" })
+  post("/new_actor" , { :controller => "actors", :action => "new"})
+  post("/update_actor/:the_id" , { :controller => "actors", :action => "update" })
+  get("/delete_actor/:an_id" , {:controller => "actors" , :action => "delete"})
 end
